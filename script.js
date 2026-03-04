@@ -78,7 +78,7 @@
   var last = 0;
   function draw(ts){
     // create trail effect
-    ctx.fillStyle = 'rgba(3,7,17,0.08)'; // same base bg with alpha
+    ctx.fillStyle = 'rgba(3,7,17,0.06)'; // same base bg with softer alpha
     ctx.fillRect(0, 0, width, height);
 
     for (var i=0; i<columns.length; i++){
@@ -87,7 +87,7 @@
       var ch = glyphs[Math.floor(Math.random() * glyphs.length)];
 
       // Tail color fade: head bright, trail handled by alpha clearing above
-      ctx.fillStyle = i % 7 === 0 ? 'rgba(0,184,244,0.9)' : 'rgba(44,255,181,0.9)';
+      ctx.fillStyle = i % 7 === 0 ? 'rgba(79,195,255,0.85)' : 'rgba(102,255,204,0.85)';
       ctx.fillText(ch, x, y);
 
       if (y > height + Math.random() * 200){
